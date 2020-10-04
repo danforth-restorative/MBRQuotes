@@ -18,11 +18,11 @@ Using the GitHub Action workflow file [.github/workflows/quote.yml](/.github/wor
 
 [Workflow Scheduler/Cron Syntax](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events)
 
-[quotes.py](Marshall-Rosenberg-Quotes/quotebot/quotes.py) pulls a random quote from [/Marshall-Rosenberg-Quotes/quotebot/quotes.yaml](/Marshall-Rosenberg-Quotes/quotebot/quotes.yaml) and sends it as a status update to [@MarshallRsnberg](https://twitter.com/marshallrsnberg) the Marshall Rosenberg Quotes twitter account.
+[quotes.py](Marshall-Rosenberg-Quotes/quotebot/quotes.py) pulls a random quote from [quotes.yaml](quotes.yaml) and sends it as a status update to [@MarshallRsnberg](https://twitter.com/marshallrsnberg) the Marshall Rosenberg Quotes twitter account.
 
 #### Quimg Bot
 
-I printed [quotes](/Marshall-Rosenberg-Quotes/quotes.yaml) onto [images](/Marshall-Rosenberg-Quotes/imgs/) using [quimg.py](Marshall-Rosenberg-Quotes/quimg.py).
+I printed [quotes](text-to-image/quotes.yaml) onto [images](imgs) using [quimg.py](text-to-image/quimg.py).
 
 [.github/workflows/quimg.yml](/.github/workflows/quimg.yml) sends an image quote status update every 9 hours at the 11th minute.
 

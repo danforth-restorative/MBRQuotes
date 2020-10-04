@@ -17,7 +17,7 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-with open('Marshall-Rosenberg-Quotes/quotebot/quotes.yaml','r') as file:
+with open('quotes.yaml','r') as file:
     # The FullLoader parameter handles the conversion from YAML
     # scalar values to Python the dictionary format
     quotes = yaml.load(file, Loader=yaml.FullLoader)

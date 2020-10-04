@@ -10,7 +10,7 @@ on:
     - cron:  '22 19 * * *'
   push:
     paths:
-    - 'Marshall-Rosenberg-Quotes/quotebot/quotes.py'
+    - 'quotes.py'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,11 +28,11 @@ jobs:
           python-version: '3.8.5' # Version range or exact version of a Python version to use, using SemVer's version range syntax
       - uses: py-actions/py-dependency-install@v2   
         with:
-          path: Marshall-Rosenberg-Quotes/quotebot/requirements.txt
+          path: requirements.txt
       - shell: bash
         env: # Or as an environment variable
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
           ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
-        run: python Marshall-Rosenberg-Quotes/quotebot/quotes.py
+        run: python quotes.py

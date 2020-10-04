@@ -18,7 +18,7 @@ Using the GitHub Action workflow file [.github/workflows/quote.yml](/.github/wor
 
 [Workflow Scheduler/Cron Syntax](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events)
 
-[quotes.py](Marshall-Rosenberg-Quotes/quotebot/quotes.py) pulls a random quote from [quotes.yaml](quotes.yaml) and sends it as a status update to [@MarshallRsnberg](https://twitter.com/marshallrsnberg) the Marshall Rosenberg Quotes twitter account.
+[quotes.py](quotes.py) pulls a random quote from [quotes.yaml](quotes.yaml) and sends it as a status update to [@MarshallRsnberg](https://twitter.com/marshallrsnberg) the Marshall Rosenberg Quotes twitter account.
 
 #### Quimg Bot
 
@@ -69,6 +69,12 @@ mogrify -define jpeg:extent=300kb *.jpg
 ### PngQuant
 
 https://pngquant.org/
+
+## Privacy Policy
+
+This app does not collect or store any user data.
+
+[Privacy Policy for MBR Quote Bot](privacy.md)
 
 ---
 

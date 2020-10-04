@@ -50,4 +50,4 @@ Also useful will be to apply for EIN. This way you can open a bank account under
 
 This app does not collect or store any user data.
 
-[Privacy Policy for MBR Quote Bot](Marshall-Rosenberg-Quotes/privacy.md)
+[Privacy Policy for MBR Quote Bot](privacy.md)

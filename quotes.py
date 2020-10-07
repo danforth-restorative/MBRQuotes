@@ -17,6 +17,8 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
+sourceLabel = 'MBR Quotes'
+
 with open('quotes.yaml','r') as file:
     # The FullLoader parameter handles the conversion from YAML
     # scalar values to Python the dictionary format
@@ -24,4 +26,4 @@ with open('quotes.yaml','r') as file:
     file.close()
     item = random.choice(quotes)
     print(item)
-    api.update_status(item)
+    api.update_status(status=item, source=sourceLabel)

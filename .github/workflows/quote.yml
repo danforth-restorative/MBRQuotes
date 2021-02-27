@@ -36,3 +36,10 @@ jobs:
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
           ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
         run: python quotes.py
+      - name: Save updated quotes.yml
+        run: |
+          git remote add gh-token "https://github.com/danforth-restorative/MBRQuotes.git"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -a -m "de-duplicate"
+          git push gh-token master

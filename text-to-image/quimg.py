@@ -10,7 +10,7 @@ x1 = 1900
 y1 = 950
 
 #choose a font OpenSansHebrew-BoldItalic.ttf
-fnt = ImageFont.truetype('et-book-bold-line-figures.ttf', 69)
+fnt = ImageFont.truetype('et-book-bold-line-figures.ttf', 92)
 
 with open('quotes.yaml','r') as file:
     # The FullLoader parameter handles the conversion from YAML
@@ -22,9 +22,13 @@ acc = 0
 
 for quote in quotes:
   acc += 1
-  dir = 'imgs'
+  dir = '/images/'
   rand = ''
-  rand = random.choice(os.listdir(dir))
+  dirlist = os.listdir(dir)
+  dirlist.remove('.DS_Store')
+  dirlist.remove('.originals')
+  dirlist.remove('watermark')
+  rand = random.choice(dirlist)
   randimg = dir + rand
   imgg = Image.open(randimg)
   img = imgg.convert('RGB')
@@ -53,8 +57,7 @@ for quote in quotes:
       else:
         fresh_sentence += letter
     incrementer+=1
-  fresh_sentence += '\n\n- Marshall B. Rosenberg'
-  print fresh_sentence
+  print(fresh_sentence)
   
   #render the text in the center of the box
   dim = d.textsize(fresh_sentence, font=fnt)

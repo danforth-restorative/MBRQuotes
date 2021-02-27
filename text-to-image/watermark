@@ -1,0 +1,21 @@
+# https://www.linuxjournal.com/content/easy-watermarking-imagemagick
+
+savedir=".originals"
+
+if [ $? -ne 0 ] ; then
+  echo "Error: failed making $savedir."
+  exit 1
+fi
+
+for image in *png *jpg *gif
+do
+ if [ -s $image ] ; then   # non-zero file size
+    width=$(identify -format %w $image)
+    convert -background '#0008' -fill white -gravity center \
+       -size ${width}x50 caption:"Marshall Rosenberg Quotes (@MBR_Quotes)" \
+       $image +swap -gravity south -composite new-$image
+     mv $image $savedir
+     mv new-$image $image
+    echo "watermarked $image successfully"
+  fi
+done

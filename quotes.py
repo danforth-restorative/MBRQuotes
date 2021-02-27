@@ -23,7 +23,14 @@ with open('quotes.yaml','r') as file:
     # The FullLoader parameter handles the conversion from YAML
     # scalar values to Python the dictionary format
     quotes = yaml.load(file, Loader=yaml.FullLoader)
-    file.close()
     item = random.choice(quotes)
     print(item)
     api.update_status(status=item, source=sourceLabel)
+    file.close()
+
+with open('quotes.yml','r') as og, open("tmp", "w") as dest:
+    for line in og:
+        decoded_string = bytes(line, "utf-8").decode("unicode_escape") 
+        if item not in decoded_string:
+            dest.write(line)
+os.rename("tmp", "quotes.yaml")

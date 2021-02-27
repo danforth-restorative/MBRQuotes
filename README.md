@@ -1,4 +1,4 @@
-# Marshall Rosenberg Quotes
+# Marshall Rosenberg Quotes ([@MBR_Quotes](https://twitter.com/MBR_Quotes))
 
 As time goes on I'll be gathering more quotes from various presentations by Marshall Rosenberg, along with links to content he references, and make sure this account can stay fresh for a long time. This message is too valuable for it to not be shared. 
 

@@ -44,4 +44,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull
           git commit -a -m "de-duplicate"
-          git push gh-token master
+          git push gh-token main

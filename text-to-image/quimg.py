@@ -22,12 +22,11 @@ acc = 0
 
 for quote in quotes:
   acc += 1
-  dir = '/images/'
+  dir = 'images/'
   rand = ''
   dirlist = os.listdir(dir)
   dirlist.remove('.DS_Store')
   dirlist.remove('.originals')
-  dirlist.remove('watermark')
   rand = random.choice(dirlist)
   randimg = dir + rand
   imgg = Image.open(randimg)

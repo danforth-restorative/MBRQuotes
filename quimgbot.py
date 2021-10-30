@@ -20,4 +20,9 @@ files=os.listdir('imgs')
 img=random.choice(files)
 img = 'imgs/' + img
 
-api.update_with_media(img, "#NonviolentCommunication #NVC #MarshallRosenberg")
+
+media = api.media_upload(img)
+
+hash = "#NonviolentCommunication #NVC #MarshallRosenberg"
+
+api.update_status(status=hash, media_ids=[media.media_id])

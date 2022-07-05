@@ -1,7 +1,6 @@
 # Tweet Quotes from Yaml
 # Adapted from: https://dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/
 
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 

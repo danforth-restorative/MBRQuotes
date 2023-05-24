@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8.5' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-      - uses: py-actions/py-dependency-install@v2   
+      - uses: py-actions/py-dependency-install@v4
         with:
           path: requirements.txt
       - shell: bash

@@ -26,15 +26,13 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8.5' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-      - name: install dependencies
-        run: pip install -r requirements.txt
       - shell: bash
         env: # Or as an environment variable
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
           ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
-        run: python quotes.py
+        run: pip install -r requirements.txt && python quotes.py
       - name: Save updated quotes.yml
         run: |
           git remote add gh-token "https://github.com/danforth-restorative/MBR_Quotes.git"

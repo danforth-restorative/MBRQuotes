@@ -24,10 +24,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v3
         with:
           python-version: '3.8.5' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-      - uses: py-actions/py-dependency-install@v4
+      - uses: py-actions/py-dependency-install@v3
         with:
           path: requirements.txt
       - shell: bash
